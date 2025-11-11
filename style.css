@@ -1,3 +1,4 @@
+/* Estilos gerais */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,50 +6,61 @@ body {
   background-color: #f4f4f4;
 }
 
-header {
-  background-color: #333;
-  color: white;
+/* Container para as skills */
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;  /* Para ajustar os cards em telas menores */
+  margin-top: 20px;
+}
+
+/* Estilo de cada card */
+.skill-card {
+  background-color: #ffffff;
+  border-radius: 8px;
   padding: 20px;
+  width: 30%; /* Largura de 30% para os cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave */
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-}
-
-section {
-  margin: 20px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-img {
-  border-radius: 50%;  /* Torna a imagem redonda */
-  max-width: 200px;    /* Ajusta o tamanho máximo da imagem */
-  margin-bottom: 20px; /* Dá um espaço abaixo da imagem */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;  /* Centraliza a imagem */
-}
-
-h2 {
+/* Títulos dos cards */
+.skill-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
   color: #333;
 }
 
-ul {
+/* Estilo das listas */
+.skill-card ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
+.skill-card li {
+  font-size: 1.2em;
+  margin: 8px 0;
+  color: #555;
 }
 
-footer a {
-  color: #f4f4f4;
-  text-decoration: none;
+/* Efeito de hover para os cards */
+.skill-card:hover {
+  transform: translateY(-10px); /* Move o card para cima */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+/* Responsividade: ajustar para telas menores */
+@media (max-width: 768px) {
+  .skill-card {
+    width: 45%; /* Cards com 45% de largura em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-card {
+    width: 100%; /* Cards ocupam 100% de largura em telas muito pequenas */
+  }
 }
